@@ -1,99 +1,168 @@
-:root{
-    --primary-color: #00171f;
-    --nav-color: #e5e5e5;
-    --fonts-color: #edff22;
-    --fonts-color2:#f1faee;
+:root {
+  --primary-color: #00171f;
+  --nav-color: #e5e5e5;
+  --fonts-color: #edff22;
+  --fonts-color2: #f1faee;
+  --accent-color: #007bff; /* Added accent color for links */
 }
 
-body{
-    background-color: var(--primary-color);
-
+body {
+  background-color: var(--primary-color);
+  margin: 0;
+  display: flex;
+  font-family: Arial, sans-serif;
+  color: #fff; /* Adjusted text color for better contrast */
 }
 
-h2{
-    color: var(--fonts-color);
-    font-weight: 800;
-    font-size: xx-large;
+h2 {
+  color: var(--fonts-color);
+  font-weight: 800;
+  font-size: 2em;
+  margin-bottom: 10px;
 }
 
-
-nav{
-    position: fixed;
-    padding: 16px;
-    width: 100%;
-    cursor: pointer;
+nav {
+  position: fixed;
+  padding: 16px;
+  width: 100%;
+  background-color: var(--primary-color);
 }
 
-nav ul{
-    display: flex;
-    gap: 19px;
-    list-style: none;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+nav ul {
+  display: flex;
+  gap: 19px;
+  list-style: none;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 0;
 }
 
-nav ul li a{
-    display: inline-block;
-    text-decoration: none;
-    font-weight: 900;
-    padding: 10px 24px;
-    color: var(--nav-color);
-    cursor: pointer;
+nav ul li {
+  margin: 0;
 }
 
-nav ul:hover  li:hover a:hover  {
-  color: #555;
+nav ul li a {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 900;
+  padding: 10px 16px;
+  color: var(--nav-color);
+  cursor: pointer;
+  transition: color 0.3s; /* Added smooth color transition */
 }
+
+nav ul li a:hover {
+  color: var(--accent-color);
+}
+
 #logo {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    height: 100px;
-    width: 130px;
-    cursor: pointer;
-  }
-  .intro{
-      display: flex;
-      justify-content: center;
-      padding: 200px;
-
-  }
-
-
-  hr{
-    border-left: 2px solid white; /* Adjust the color and thickness as needed */
-    height: 0.2; /* Adjust the height of the line */
-    margin-left: 0;
-  }
-
-  .education{
-    color: var(--fonts-color2);
-    display: flex;
-    justify-content: center;
-    transition: background-color 0.3s;
-    /* padding: 14em; */
-  }
-  h2 {
-    position: relative;
-    padding-bottom: 1rem;
-    display: block;
-    line-height: inherit;
-    margin-left: 270px;
-    color: var(--fonts-color2);
-  }
-  
-h4{
-  position: relative;
-  padding-top: 0rem;
-  display: block;
-  color: whitesmoke;
-  margin-left: 270px;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  height: 100px;
+  width: 130px;
+  cursor: pointer;
 }
 
+.intro{
+  
+}
+.cta-section a{
+  text-decoration: none;
+  color: white;
+}
 
-h2:hover a:hover{
-  transition: .3s;
-  color: red;
+.education-container {
+  padding: 120px;
+  padding-left: 200px;
+  display: flex;
+  justify-content: space-between;
+}
 
+.eduction,
+.right-section {
+  color: var(--fonts-color2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: background-color 0.3s;
+  padding: 4em;
+  margin: 10px 5px;
+  flex: 1;
+}
+
+.cta-section a:hover{
+  color: var(--accent-color);
+}
+
+.container {
+  
+  padding: 125px;
+  width: 80%;
+  padding-left: 230px;
+  /* max-width: 800px; Adjust the max-width as needed */
+}
+
+.resume-section {
+  margin-bottom: 30px;
+}
+
+h1, h2, h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #edff22;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.intro h2 {
+  padding: 200px;
+  font-size: 24px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.resume-section ul ul {
+  margin-top: 5px;
+  padding-left: 20px;
+}
+
+.resume-section ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.resume-section ul a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.resume-section ul a:hover {
+  text-decoration: underline;
+}
+.resume-section{
+  text-decoration: none;
+  padding-left: 200px;
+}
+
+.contact-info p a{
+  text-decoration: none;
+  color: var(--fonts-color2);
+}
+.contact-section{
+  padding: 100px;
+  padding-left: 250px;
+}
+.contact-section h2{
+  padding-right: 100px;
 }

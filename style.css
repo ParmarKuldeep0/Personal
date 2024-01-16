@@ -3,15 +3,14 @@
   --nav-color: #e5e5e5;
   --fonts-color: #edff22;
   --fonts-color2: #f1faee;
-  --accent-color: #007bff; /* Added accent color for links */
+  --accent-color: #007bff;
 }
 
 body {
   background-color: var(--primary-color);
   margin: 0;
-  display: flex;
   font-family: Arial, sans-serif;
-  color: #fff; /* Adjusted text color for better contrast */
+  color: #fff;
 }
 
 h2 {
@@ -48,7 +47,7 @@ nav ul li a {
   padding: 10px 16px;
   color: var(--nav-color);
   cursor: pointer;
-  transition: color 0.3s; /* Added smooth color transition */
+  transition: color 0.3s;
 }
 
 nav ul li a:hover {
@@ -65,19 +64,22 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-.intro{
-  
+.intro {
+  text-align: center;
+  padding: 200px;
 }
-.cta-section a{
+
+.cta-section a {
   text-decoration: none;
   color: white;
 }
 
-.education-container {
+.education-container,
+.container,
+.resume-section,
+.contact-section {
+  text-align: center;
   padding: 120px;
-  padding-left: 200px;
-  display: flex;
-  justify-content: space-between;
 }
 
 .eduction,
@@ -85,42 +87,28 @@ nav ul li a:hover {
   color: var(--fonts-color2);
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   transition: background-color 0.3s;
   padding: 4em;
   margin: 10px 5px;
   flex: 1;
 }
 
-.cta-section a:hover{
+.cta-section a:hover {
   color: var(--accent-color);
 }
 
-.container {
-  
-  padding: 125px;
-  width: 80%;
-  padding-left: 230px;
-  /* max-width: 800px; Adjust the max-width as needed */
+.resume-section {
+  text-align: center;
+  padding: 5px 5px 5px 5px; /* Adjusted padding for better spacing */
+  margin: 0; /* Removed margin to reduce space */
 }
 
-.resume-section {
-  margin-bottom: 30px;
-}
 
 h1, h2, h3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
   color: #edff22;
   padding-bottom: 5px;
   margin-bottom: 10px;
-}
-
-.intro h2 {
-  padding: 200px;
-  font-size: 24px;
 }
 
 ul {
@@ -150,19 +138,40 @@ li {
 .resume-section ul a:hover {
   text-decoration: underline;
 }
-.resume-section{
-  text-decoration: none;
-  padding-left: 200px;
-}
 
-.contact-info p a{
+.contact-info p a {
   text-decoration: none;
   color: var(--fonts-color2);
 }
-.contact-section{
+
+.contact-section {
   padding: 100px;
-  padding-left: 250px;
 }
-.contact-section h2{
-  padding-right: 100px;
+
+@media only screen and (max-width: 600px) {
+  /* Styles for screens with a maximum width of 600px or less */
+  .education-container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    padding: 50px; /* Adjusted padding for better spacing */
+  }
+
+  .eduction,
+  .right-section {
+    padding: 2em; /* Adjusted padding for better spacing */
+    margin: 10px 0; /* Adjusted margin for better spacing */
+  }
+
+  .container {
+    padding: 50px;
+    padding-left: 10px;
+  }
+
+  .resume-section {
+    padding: 2em;
+  }
+
+  .contact-section {
+    padding: 50px;
+    padding-left: 10px;
+  }
 }
